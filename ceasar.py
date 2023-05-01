@@ -3,8 +3,8 @@ class noalphabetException(Exception):
   "your word contains not-a-alphabet"
   pass
 
-word = 'a quick brown fox jumps over the lazy dog'
-adjust = 5
+# word = 'q'
+# adjust = 5
 
 def cipher(word,adjust=3):
   ciphered_word = ''
@@ -29,4 +29,13 @@ def cipher(word,adjust=3):
     return None
   return ciphered_word
 
-cipher(word,adjust)
+while True:
+  print("input word to adjust, input 'q'to quit")
+  word = str(input())
+  if word == 'q':
+    break
+  else:
+    print('input digits to adjust(integer)')
+    adjust = int(input())
+    print(cipher(word,adjust))
+  
